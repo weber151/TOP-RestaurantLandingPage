@@ -1,3 +1,7 @@
+import cheeseImg1 from './cheeseImg1.png';
+import cheeseImg2 from './cheeseImg1.png';
+import cheeseImg3 from './cheeseImg1.png';
+import cheese_logo from './cheese_logo.png';
 
 const websiteBody = document.getElementById("content");
 
@@ -36,7 +40,7 @@ const _loadMenu = function() {
     websiteBody.appendChild(menu);
 
     const menuLogo = document.createElement('img');
-    menuLogo.src = "../src/cheese_logo.png";
+    menuLogo.src = cheese_logo;
     menuLogo.classList.add("menuLogo")
     menu.appendChild(menuLogo);
 
@@ -104,8 +108,8 @@ const _loadHomeInfo = function(mainSection) {
 
 const _loadCheeseMenu = function(mainSection){
     // Food Items Below
-_createCheeseGrid(mainSection, 3); //create cheeses in grid
-// mainSection.appendChild(cheeseMenu);
+    _createCheeseGrid(mainSection, 3); //create cheeses in grid
+
 }
 
 const _createCheeseGrid = function(parent, amount) {
@@ -116,19 +120,21 @@ const _createCheeseGrid = function(parent, amount) {
         let cheeseName = document.createElement('p'); // 
         let cheeseImg = document.createElement('img');
         let cheesePrice = document.createElement('p');
-        cheeseImg.src = '../src/cheeseImg' + (i+1) + '.png';
-        cheeseImg.classList.add("cheeseImg");
+                cheeseImg.classList.add("cheeseImg");
         cheeseContainer.classList.add('cheese');
         cheeseContainer.id = 'cheese' + i;
         if(i == 0) {
+            cheeseImg.src = cheeseImg1;
             cheesePrice.innerHTML = '5gp -- per Kg';
             cheeseName.innerHTML = "World Famous Dark <br/>Brie-licious Brie";
         };
         if(i == 1) {
+            cheeseImg.src = cheeseImg2;
             cheesePrice.innerHTML = '2gp -- per Kg';
             cheeseName.innerHTML = "Mr. Softbelly's<br/>Cheddar Than The Rest";
         }
         if(i == 2) {
+            cheeseImg.src = cheeseImg3;
             cheesePrice.innerHTML = '3gp -- per Kg';
             cheeseName.innerHTML = "Provolone and Behold<br/>Ernest's Best Provolone";
         }
