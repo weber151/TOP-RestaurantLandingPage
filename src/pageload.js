@@ -36,7 +36,7 @@ const _loadMenu = function() {
     websiteBody.appendChild(menu);
 
     const menuLogo = document.createElement('img');
-    menuLogo.src = "../src/cheese_logo.png";
+    menuLogo.src = "src/cheese_logo.png";
     menuLogo.classList.add("menuLogo")
     menu.appendChild(menuLogo);
 
@@ -116,7 +116,7 @@ const _createCheeseGrid = function(parent, amount) {
         let cheeseName = document.createElement('p'); // 
         let cheeseImg = document.createElement('img');
         let cheesePrice = document.createElement('p');
-        cheeseImg.src = '../src/cheeseImg' + (i+1) + '.png';
+        cheeseImg.src = 'src/cheeseImg' + (i+1) + '.png';
         cheeseImg.classList.add("cheeseImg");
         cheeseContainer.classList.add('cheese');
         cheeseContainer.id = 'cheese' + i;
